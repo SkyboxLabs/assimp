@@ -35,13 +35,13 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #----------------------------------------------------------------------
 SET(CMAKE_LEGACY_CYGWIN_WIN32 0) # Remove when CMake >= 2.8.4 is required
-CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+CMAKE_MINIMUM_REQUIRED( VERSION 3.8 )
 PROJECT( Assimp )
 
 # All supported options ###############################################
 OPTION( BUILD_SHARED_LIBS
   "Build package with shared libraries."
-  ON
+  OFF
 )
 OPTION( BUILD_FRAMEWORK
   "Build package as Mac OS X Framework bundle."
@@ -61,7 +61,7 @@ OPTION( ASSIMP_ANDROID_JNIIOSYSTEM
 )
 OPTION( ASSIMP_NO_EXPORT
   "Disable Assimp's export functionality."
-  OFF
+  ON
 )
 OPTION( ASSIMP_BUILD_ZLIB
   "Build your own zlib"
@@ -69,7 +69,7 @@ OPTION( ASSIMP_BUILD_ZLIB
 )
 OPTION( ASSIMP_BUILD_ASSIMP_TOOLS
   "If the supplementary tools for Assimp are built in addition to the library."
-  ON
+  OFF
 )
 OPTION ( ASSIMP_BUILD_SAMPLES
   "If the official samples are built as well (needs Glut)."
@@ -77,7 +77,7 @@ OPTION ( ASSIMP_BUILD_SAMPLES
 )
 OPTION ( ASSIMP_BUILD_TESTS
   "If the test suite for Assimp is built in addition to the library."
-  ON
+  OFF
 )
 OPTION ( ASSIMP_COVERALLS
   "Enable this to measure test coverage."

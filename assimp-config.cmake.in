@@ -10,7 +10,7 @@
 # ASSIMP_LIBRARY_DIRS - link directories
 # ASSIMP_LIBRARIES - libraries to link plugins with
 # ASSIMP_Boost_VERSION - the boost version assimp was compiled with
-get_filename_component(ASSIMP_ROOT_DIR "@CMAKE_INSTALL_PREFIX@" REALPATH)
+get_filename_component(ASSIMP_ROOT_DIR "@SBL_GENERATOR_DIRECTORY@" REALPATH)
 
 if( MSVC )
   # in order to prevent DLL hell, each of the DLLs have to be suffixed with the major version and msvc prefix
